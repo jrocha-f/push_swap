@@ -19,7 +19,7 @@ SORCES = push_swap.c stack_init.c stack_utils.c check_args.c stack_del.c\
 OBJ = $(SORCES:.c=.o)
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror
 
 SUBDIRS = libft
 
