@@ -12,8 +12,6 @@
 
 #include "push_swap.h"
 
-// VERIFICAR SE NAO E NULO O VALOR e se 0 zero da problema
-
 int	main(int argc, char **argv)
 {
 	t_stack	*a;
@@ -22,7 +20,7 @@ int	main(int argc, char **argv)
 	a = NULL;
 	b = NULL;
 	if (argc < 2)
-		return (1);
+		return (0);
 	if (!argv[1][0])
 	{
 		ft_putstr_fd("Error\n", 2);

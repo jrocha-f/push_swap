@@ -23,16 +23,16 @@ CFLAGS = -Wall -Wextra -Werror
 
 SUBDIRS = libft
 
-all: $(NAME) libraries
+all: $(NAME)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
-$(NAME): $(OBJ) libraries
+$(NAME): $(OBJ) libft/libft.a
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJ) -Llibft -lft
 
-.PHONY: libraries
-libraries:$(SUBDIRS)
+libft/libft.a:
+	$(MAKE) -C libft
 
 .PHONY: $(SUBDIRS)
 $(SUBDIRS):
