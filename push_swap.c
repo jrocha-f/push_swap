@@ -21,8 +21,13 @@ int	main(int argc, char **argv)
 
 	a = NULL;
 	b = NULL;
-	if (argc < 2 || (argc < 2 && !argv[1][0]))
+	if (argc < 2)
 		return (1);
+	if (!argv[1][0])
+	{
+		ft_putstr_fd("Error\n", 2);
+		return (1);
+	}
 	stack_init(&a, argc, argv);
 	if (is_sorted(a))
 	{
